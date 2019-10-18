@@ -1,0 +1,34 @@
+@import "abstract/functions";
+@import "abstract/mixim";
+@import "abstract/variables";
+
+@import "base/base";
+@import "base/animation";
+@import "base/typography";
+@import "base/utility";
+
+@import "pages/home";
+
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/navigation";
+@import "layouts/grid";
+
+@import "component/composition";
+@import "component/popup";
+@import "component/feature-box";
+@import "component/story";
+@import "component/bg-video";
+@import "component/form.scss";
+@import "component/button";
+@import "component/card";
+
+//Animation.scss  => Is where the all animation related code has been written..
+
+//base.scss  =>  is where the all basic layout  releated to the html page has been stored..
+
+//typogrphy.scss =>  is where the all code relted to the text on the page has been writeen... including all header, footer, parageraph, main-section text related code has been stored..
+
+//utility.scss =>  is where the all margin releated code such as the margin top, bottom etc has been stored..
+
+//bg-video.scss =>

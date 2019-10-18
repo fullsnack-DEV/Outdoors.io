@@ -1,0 +1,92 @@
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  @supports (-webkit-backdrop-filter: blur(10px)) or
+    (backdrop-filter: blur(10px)) {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba($color: #000000, $alpha: 0.3);
+  }
+
+  // @include respond(tab-port) {
+  //   height: 100vh;
+  //   width: 100%;
+  // }
+
+  &__content {
+    @include abscenter;
+    width: 75%;
+
+    background-color: $col-white;
+    box-shadow: 0 2rem 4rem rgba(black, 0.2);
+    border-radius: 3px;
+    display: table;
+    overflow: hidden;
+    opacity: 1;
+    // @include respond(tab-port) {
+    //   height: 100vh;
+    //   width: 100%;
+    // }
+    // transform: translate(-50%, -50%) scale(0.5);
+    // transition: all 0.4s;
+  }
+  &__left {
+    width: 33.333333%;
+    display: table-cell;
+  }
+  &__img {
+    display: block;
+    width: 100%;
+  }
+  &__right {
+    width: 66.6666667%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem;
+  }
+  &__text {
+    font-size: 1.3rem;
+    margin-bottom: 4rem;
+
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid #414144;
+    hyphens: auto;
+  }
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+  //open state hai
+  //   &:target &__Content {
+  //     opacity: 1;
+  //     transform: translate(-50%, -50%) scale(1);
+  //   }
+
+  &__close {
+    &:link,
+    &:visited {
+      color: #414144;
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      font-size: 3rem;
+      text-decoration: none;
+      display: inline-block;
+      line-height: 1;
+      transition: all 0.2s;
+    }
+    &:hover {
+      color: $col-primery;
+    }
+  }
+}
